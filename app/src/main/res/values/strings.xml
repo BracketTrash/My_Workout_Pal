@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Workout Pal</string>
+    <string name="button_addRoutine">Add Reminder</string>
+    <string name="hint_routineTitle">Reminder Title</string>
+    <string name="hint_routineDescription">Description</string>
+    <string name="menu_addRoutine">Add</string>
+    <string name="menu_cancelRoutine">Cancel</string>
+    <string name="enter_routine_title">Please enter a Reminder Title</string>
+    <string name="save_routine">Save Reminder</string>
+    <string name="button_addImage">Add Image</string>
+    <string name="select_routine_image">Select reminder image</string>
+    <string name="change_routine_image">Change reminder image</string>
+    <string name="button_location">Set Location</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="menu_deleteRoutine">Delete</string>
+</resources>
