@@ -103,7 +103,7 @@ class RoutineActivity : AppCompatActivity(), AnkoLogger {
         }
 
         toolbarAdd.title = title
-        setSupportActionBar(toolbarAdd)
+//        setSupportActionBar(toolbarAdd)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean{

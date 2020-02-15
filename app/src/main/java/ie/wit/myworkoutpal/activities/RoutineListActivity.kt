@@ -26,7 +26,7 @@ class RoutineListActivity : AppCompatActivity(), RoutineListener {
         loadRoutines()
 
         toolbarMain.title = title
-        setSupportActionBar(toolbarMain)
+//        setSupportActionBar(toolbarMain)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
