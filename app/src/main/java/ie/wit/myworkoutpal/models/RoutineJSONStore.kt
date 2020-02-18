@@ -20,7 +20,7 @@ fun generateRandomId(): Long {
 class RoutineJSONStore : RoutineStore, AnkoLogger{
 
     val context: Context
-    var reminders = mutableListOf<RoutineModel>()
+    var routines = mutableListOf<RoutineModel>()
 
     constructor (context: Context) {
         this.context = context
@@ -30,42 +30,39 @@ class RoutineJSONStore : RoutineStore, AnkoLogger{
     }
 
     override fun findAll(): MutableList<RoutineModel> {
-        return reminders
+        return routines
     }
 
-    override fun create(reminder: RoutineModel) {
-        reminder.id = generateRandomId()
-        reminders.add(reminder)
+    override fun create(routine: RoutineModel) {
+        routine.id = generateRandomId()
+        routines.add(routine)
         serialize()
     }
 
-    override fun update(reminder: RoutineModel) {
-        val remindersList = findAll() as ArrayList<RoutineModel>
-        var foundReminder: RoutineModel? = remindersList.find { p -> p.id == reminder.id }
-        if (foundReminder != null) {
-            foundReminder.title = reminder.title
-            foundReminder.description = reminder.description
-            foundReminder.image = reminder.image
-            foundReminder.lat = reminder.lat
-            foundReminder.lng = reminder.lng
-            foundReminder.zoom = reminder.zoom
+    override fun update(routine: RoutineModel) {
+        val routineList = findAll() as ArrayList<RoutineModel>
+        var foundRoutine: RoutineModel? = routineList.find { p -> p.id == routine.id }
+        if (foundRoutine != null) {
+            foundRoutine.title = routine.title
+            foundRoutine.description = routine.description
+            foundRoutine.sets = routine.sets
         }
         serialize()
     }
 
     override fun delete(placemark: RoutineModel) {
-        reminders.remove(placemark)
+        routines.remove(placemark)
         serialize()
     }
 
     private fun serialize() {
-        val jsonString = gsonBuilder.toJson(reminders, listType)
+        val jsonString = gsonBuilder.toJson(routines, listType)
         write(context, JSON_FILE, jsonString)
     }
 
     private fun deserialize() {
         val jsonString = read(context, JSON_FILE)
-        reminders = Gson().fromJson(jsonString, listType)
+        routines = Gson().fromJson(jsonString, listType)
     }
 
 }

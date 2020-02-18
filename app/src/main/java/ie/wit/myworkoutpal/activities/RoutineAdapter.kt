@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ie.wit.myworkoutpal.R
-import ie.wit.myworkoutpal.helpers.readImageFromPath
 import ie.wit.myworkoutpal.models.RoutineModel
-import kotlinx.android.synthetic.main.card_routine.view.*
-
+import kotlinx.android.synthetic.main.card_routine.view.description
+import kotlinx.android.synthetic.main.card_routine.view.routineTitle
+import kotlinx.android.synthetic.main.card_routine.view.sets
 interface RoutineListener {
     fun onRoutineClick(routine: RoutineModel)
 }
@@ -33,7 +33,7 @@ class RoutineAdapter constructor(private var routines: List<RoutineModel>,
         fun bind(routine: RoutineModel,  listener : RoutineListener) {
             itemView.routineTitle.text = routine.title
             itemView.description.text = routine.description
-            itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, routine.image))
+            itemView.sets.text = routine.sets
             itemView.setOnClickListener { listener.onRoutineClick(routine) }
         }
     }

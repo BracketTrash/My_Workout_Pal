@@ -8,29 +8,29 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="113dp"
         android:padding="16dp">
-
-        <ImageView
-            android:id="@+id/imageIcon"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="16dp" android:layout_marginLeft="302dp"/>
 
         <TextView
             android:id="@+id/routineTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/routineTitle" android:textColor="@color/colorPrimaryDark"/>
+            android:layout_below="@id/routineTitle"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/routineTitle"
+            android:textColor="@color/colorPrimaryDark" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

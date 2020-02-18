@@ -25,8 +25,7 @@ class RoutineListActivity : AppCompatActivity(), RoutineListener {
         recyclerView.layoutManager = layoutManager
         loadRoutines()
 
-        toolbarMain.title = title
-//        setSupportActionBar(toolbarMain)
+      //        setSupportActionBar(toolbarMain)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

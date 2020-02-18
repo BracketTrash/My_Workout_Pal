@@ -27,11 +27,7 @@ class RoutineMemStore : RoutineStore, AnkoLogger{
         if (foundRoutine != null) {
             foundRoutine.title = routine.title
             foundRoutine.description = routine.description
-            foundRoutine.date = routine.date
-            foundRoutine.image = routine.image
-            foundRoutine.lat = routine.lat
-            foundRoutine.lng = routine.lng
-            foundRoutine.zoom = routine.zoom
+            foundRoutine.sets = routine.sets
             logAll()
         }
     }

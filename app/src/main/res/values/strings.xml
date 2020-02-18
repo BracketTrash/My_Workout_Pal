@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">My Workout Pal</string>
-    <string name="button_addRoutine">Add Reminder</string>
-    <string name="hint_routineTitle">Reminder Title</string>
-    <string name="hint_routineDescription">Description</string>
+    <string name="button_addRoutine">Add Routine</string>
+    <string name="hint_routineTitle">Exercise Title</string>
+    <string name="hint_routineDescription">Reps</string>
+    <string name="hint_routineSets">Sets</string>
     <string name="menu_addRoutine">Add</string>
     <string name="menu_cancelRoutine">Cancel</string>
     <string name="enter_routine_title">Please enter a Reminder Title</string>
