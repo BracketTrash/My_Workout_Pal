@@ -9,7 +9,7 @@ import ie.wit.myworkoutpal.helpers.*
 import java.util.*
 
 
-val JSON_FILE = "reminder.json"
+val JSON_FILE = "routines.json"
 val gsonBuilder = GsonBuilder().setPrettyPrinting().create()
 val listType = object : TypeToken<ArrayList<RoutineModel>>() {}.type
 
@@ -50,19 +50,19 @@ class RoutineJSONStore : RoutineStore, AnkoLogger{
         serialize()
     }
 
-    override fun delete(placemark: RoutineModel) {
-        routines.remove(placemark)
+    private fun deserialize() {
+        val jsonString = read(context, JSON_FILE)
+        routines = Gson().fromJson(jsonString, listType)
+    }
+
+    override fun delete(routine: RoutineModel) {
+        routines.remove(routine)
         serialize()
     }
 
     private fun serialize() {
         val jsonString = gsonBuilder.toJson(routines, listType)
         write(context, JSON_FILE, jsonString)
-    }
-
-    private fun deserialize() {
-        val jsonString = read(context, JSON_FILE)
-        routines = Gson().fromJson(jsonString, listType)
     }
 
 }

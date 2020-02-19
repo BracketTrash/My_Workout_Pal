@@ -17,10 +17,8 @@ import kotlinx.android.synthetic.main.activity_routine.description
 class RoutineActivity : AppCompatActivity(), AnkoLogger {
 
     var routine = RoutineModel()
-    var edit = false
-    val IMAGE_REQUEST = 1
     lateinit var app: MainApp
-    val LOCATION_REQUEST = 2
+    var edit = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

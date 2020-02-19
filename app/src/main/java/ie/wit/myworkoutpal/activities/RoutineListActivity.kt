@@ -17,15 +17,13 @@ class RoutineListActivity : AppCompatActivity(), RoutineListener {
     lateinit var app: MainApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        app = application as MainApp
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_routine_list)
-        app = application as MainApp
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
         loadRoutines()
-
-      //        setSupportActionBar(toolbarMain)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -33,15 +31,15 @@ class RoutineListActivity : AppCompatActivity(), RoutineListener {
         return super.onCreateOptionsMenu(menu)
     }
 
+    override fun onRoutineClick(routine: RoutineModel) {
+        startActivityForResult(intentFor<RoutineActivity>().putExtra("routine_edit", routine), 0)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.item_add -> startActivityForResult<RoutineActivity>(0)
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onRoutineClick(routine: RoutineModel) {
-        startActivityForResult(intentFor<RoutineActivity>().putExtra("routine_edit", routine), 0)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -13,6 +13,6 @@ class MainApp : Application(), AnkoLogger {
     override fun onCreate() {
         super.onCreate()
         routines = RoutineJSONStore(applicationContext)
-        info("Reminder started")
+        info("MyWorkourPal started")
     }
 }

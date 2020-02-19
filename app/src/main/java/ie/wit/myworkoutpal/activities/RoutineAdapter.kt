@@ -18,7 +18,13 @@ class RoutineAdapter constructor(private var routines: List<RoutineModel>,
                                  private val listener: RoutineListener) : RecyclerView.Adapter<RoutineAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
-        return MainHolder(LayoutInflater.from(parent?.context).inflate(R.layout.card_routine, parent, false))
+        return MainHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.card_routine,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: MainHolder, position: Int) {
