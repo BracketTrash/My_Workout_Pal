@@ -18,10 +18,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ie.wit.myworkoutpal.activities.MapsActivity"
-            android:label="@string/title_activity_maps">
-        </activity>
-        <activity
             android:name="ie.wit.myworkoutpal.activities.RoutineActivity">
         </activity>
     </application>

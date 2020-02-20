@@ -44,8 +44,8 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"/>
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/description"
@@ -57,8 +57,8 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"/>
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -71,7 +71,7 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/textColor"
                     android:textSize="14sp" />
 
                 <Button
