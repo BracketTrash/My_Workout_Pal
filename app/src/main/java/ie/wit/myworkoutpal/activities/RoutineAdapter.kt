@@ -10,6 +10,7 @@ import ie.wit.myworkoutpal.models.RoutineModel
 import kotlinx.android.synthetic.main.card_routine.view.description
 import kotlinx.android.synthetic.main.card_routine.view.routineTitle
 import kotlinx.android.synthetic.main.card_routine.view.sets
+
 interface RoutineListener {
     fun onRoutineClick(routine: RoutineModel)
 }

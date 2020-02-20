@@ -16,21 +16,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/textColor" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/routineTitle"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/textColor" />
 
         <TextView
             android:id="@+id/sets"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/description"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/textColor" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
